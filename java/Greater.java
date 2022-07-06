@@ -1,20 +1,20 @@
-package com.rajneesh;
+package two;
 
-public class Greater extends Accept{
+public class Greater {
 
-	public void greater()
+	
+	
+	public static void greater(int[] a)
 	{
-		accept();
-		int temp=arr[0];
-		for(int i=0;i<n;i++)
+		//int t=a.length;
+		int temp=a[0];
+		for(int i=0;i<a.length;i++)
 		{
-			if(temp<arr[i])
+			if(temp<a[i])
 			{
-				temp=arr[i];
+				temp=a[i];
 			}
 		}
 		System.out.println("Greater number is :"+temp);
 	}
-	
-	
 }
