@@ -1,0 +1,443 @@
+Imagine that you are a freelance course coordinator for programmers. In one of your class, you have  analyzed the following code: 
+
+What will be the output when the preceding program is compiled and executed?
+
+class TestQuestion implements Runnable 
+{ 
+	public void start() 
+	{
+	 System.out.println("start"); 
+	} 
+	public static void main(String s[]) 
+	{ 
+		TestQuestion ob = new TestQuestion(); 
+		Thread th = new Thread(); 
+                                   th.start(); 	
+	} 
+} 
+
+   
+A.The program will display the output as:    start  
+B.The program will generate compilation error.  (ans because we have not implemented run which is present in runnable interface )
+C.The program will compile and execute successfully, but no output will be shown.  D.The program will throw a runtime exception.  
+
+
+
+-------------------
+
+  Jaya is a software developer in an MNC. In one of her projects, she wrote a program as:   
+What will be the output when the preceding program is compiled and executed? 
+class MyClass implements Runnable 
+{ 
+	void run(String str) 
+	{
+		 System.out.println(str); 
+	}
+}
+class TestQuestion 
+{ 
+	public static void main(String s[]) 
+	{ 
+		MyClass obj = new MyClass(); 
+		Thread t = new Thread(obj); 
+	} 
+} 
+ 
+A.  The program will display the output as:  str  
+B.  The program will generate compilation error. (ans we have implemented run method but it takes argument but we have to implement no arg run method) 
+C. The program will compile and execute successfully, but no output will be shown.  D.  The program will throw a runtime exception. 
+
+--------
+ Jennie is a software developer in an MNC. In one of her projects, she wrote a program as:   
+  
+class TestQuestion implements Runnable 
+{ 
+	public void start() 
+	{ 
+		System.out.println("Executing start method"); 
+	} 
+	public static void main(String s[]) 
+	{ 
+		Thread th = new Thread(); 
+		th.start(); 
+	} 
+} 
+    
+What will be the output when the preceding program is compiled and executed?
+A.  The program will display the output as:    Executing start method   
+B.  The program will generate compilation error. (ans because we have not implemented run method )   
+C. The program will compile and execute successfully, but no output will be shown.  D.  The program will throw a runtime exception.   
+
+
+------------
+
+ Jennie is a software developer in an MNC. In one of her projects, she wrote a program as: 
+ 
+class TestQuestion extends Thread 
+{ 
+	public void run() 
+	{ 
+		System.out.println("calculating run method"); 
+	} 
+	public static void main(String s[]) 
+	{ 
+		Thread th = new Thread(); 
+	th.start(); 
+	} 
+} 
+   
+What will be the output when the preceding program is compiled and executed?  
+A.  The program will display the output as: calculating run method   
+B.   The program will generate compilation error.  
+C. The program will compile and execute successfully, but no output will be shown. (ans  because we have called run method of thread class which have empty implementation)
+  D.  The program will throw a runtime exception.  
+
+
+------------
+
+ Hemant works as a Programmer for SoftTech In. He writes the following program:   
+
+class TestQuestion extends Thread 
+{ 
+	public void run() 
+	{ 
+		System.out.println("calculating run method"); 
+	} 
+	public static void main(String s[]) 
+	{ 
+		TestQuestion th = new TestQuestion(); 
+		th.start(); 
+	} 
+} 
+    
+What will be the output when the preceding program is compiled and executed?  
+A.  The program will display the output as:    calculating run method   (ans)
+B.  The program will generate compilation error.  
+C. The program will compile and execute successfully, but no output will be shown.  D.  The program will throw a runtime exception.  
+
+---------
+
+ Maria organizes software classes for the students. In one of her class she wrote a program as: 
+ 
+class TestQuestion implements Runnable 
+{ 
+	public void run() 
+	{ 
+		System.out.println("run() method is invoked"); 
+	} 
+	public static void main(String ar[]) 
+	{ 
+		TestQuestion ob = new TestQuestion(); 
+		Thread th = new Thread(ob); 
+		th.start(); 
+	} 
+} 
+ 
+What will be the output when the preceding program is compiled and executed?  
+A. The program will compile and execute successfully, but no output will be shown.  B.  The program will generate compilation error.  
+C.  The program will display the output as:  run() method is invoked  (ans)
+D.  The program will throw a runtime exception.
+
+----------
+
+ Maya is a software engineer and she has written a program as: 
+ 
+class TestQuestion 
+{ 
+	public static void main(String s[]) 
+	{ 
+		try 
+		{ 
+			int x = 6/0; 
+		} 
+		catch(Exception e) 
+		{ 
+			System.out.println("Exception:"+e); 
+		} 
+		catch(ArithmeticException e1) 
+		{ 
+			System.out.println("Arithmetic Exception:"+e1); 
+		} 
+	} 
+} 
+    
+What will be the output when the preceding program is compiled and executed?  
+A.  The program will display the output as:  0  
+B.  The program will generate compilation error. (ans because order of Exception class is not maintained) 
+C. The program will compile and execute successfully, but no output will be shown.  D.  The program will throw a runtime exception.  
+
+
+------------
+
+Neha works as a Programmer for Kogent Solutions Inc. She writes the following program: 
+ 
+class TestQuestion 
+{ 
+	public static void main(String s[]) 
+	{ 
+		try 
+		{ 
+			int x = 6/0; 
+		} 
+		catch(ArithmeticException e1) 
+		{
+			System.out.println("Arithmetic Exception is thrown"); 
+		} 
+	} 
+} 
+   
+What will be the output when the preceding program is compiled and executed?  
+A.  The program will display the output as:    Arithmetic Exception is thrown  (ans)
+B.  The program will generate compilation error.  
+C.  The program will display the output as:  0  
+D. The program will compile and execute successfully, but no output will be shown.
+
+
+-----------
+
+
+Which of the following events are susceptible for throwing an exception?  
+A. Dividing any number by 0    
+B. Attempt to search array beyond index position  
+C. trying to open a file which does not exists       
+D. attempt to add two integer objects by + operator  
+
+
+---------------
+
+class TestQuestion 
+{ 
+	public static void main(String s[]) 
+	{ 
+		try 
+		{ 
+			for(int i=0;i<5;++i) 
+			{ 
+				System.out.println(s[i]); 
+			} 
+		} 
+		catch(ArrayIndexOutOfBoundsException e) 
+		{ 
+			System.out.println("Exception Generated:"+e); 
+		} 
+		finally 
+		{} 
+	} 
+} 
+    What will happen if the preceding program is compiled successfully, and executed by the following  command line:    
+java TestQuestion niraj ? 
+ 
+A. The program will display the output as: niraj    Exception Generated:java.lang.ArrayIndexOutOfBoundsException: 1  
+B. The program will display the output as:    Exception Generated:java.lang.ArrayIndexOutOfBoundsException: 1  
+C. The program will display the output as: niraj  
+D. The program will compile and execute successfully, but no output will be shown.  
+
+
+-----------------
+
+
+ Which of the following exception is generated by assertion statements?  
+A.  ArrayIndexOutOfBoundException  
+B.    RuntimeException  
+C.  Error        
+D.    AssertionError  (ans)
+
+----------
+
+Rahul is a student of computer science and he has written a program as: 
+ 
+class TestQuestion  
+{ 
+	public static void main(String[] args) 
+	{ 
+		int k = 0; 
+		try 
+		{ 
+			int i = 5/k;  
+		} 
+		catch(ArithmeticException e) 
+		{  
+			System.out.println("1"); 
+		} 
+		catch(RuntimeException e) 
+		{  
+			System.out.println("2"); 
+		} 
+		catch(Exception e) 
+		{  
+			System.out.println("3"); 
+		} 
+		Finally 
+		{  
+			System.out.println("4");  
+		} 
+		System.out.println("5");  
+	} 
+} 
+       
+What will be the output when the preceding code is compiled and executed?  
+A.  The program will display the output as: 1    3    4  B.    The program will generate compilation error.(ans)      
+C.  The program will display the output as:  1	 2   3 D.    The program will display the output as: 1   4   5
+
+---------------------
+
+public class Test implements Runnable 
+{ 
+	public static void main (String[] args) throws Exception 
+	{  
+		Thread t = new Thread(new Test()); 
+		t.start(); 
+		System.out.print("Thread Started"); 
+		t.join();  
+		System.out.print("Completed"); 
+	}  
+	public void run() 
+	{  
+		for (int i= 0; i< 5; i++) 
+		{ 
+			System.out.print(i); 
+		} 
+	} 
+} 
+    
+What will happen when he attempts to compile and execute the program?  
+A.  It will produce the output as:    
+	Thread StartedCompleted
+B.    It will produce the output as:                 
+	Thread Started01234Completed  
+C.  It will give compilation error.   
+D.    It will throw a runtime exception.  
+
+
+--------------
+
+Consider a scenario where Test1 and Test2 are references variables. Test1 refers to a Thread and Test2 refers to an object. Test1 is currently executing the Test2.wait() method. Which of the following methods need to be invoked by another thread to ensure that Test1 stops execution of the wait() method?  
+A.  Test2.notify()  
+B.    Test1.notify()  
+C.    Thread.notify()   
+D.    Test2.notifyAll()  
+
+--------------
+
+Which of the following is true about the finalize() method?  
+A.  Every class inherits the finalize() method from java.lang.Thread.  
+B.  The finalize() method is  called by the garbage collector when it determines that no more references to  the object exist.  
+C.  Every class inherits the finalize() method from java.lang.Object.  
+D.  The finalize() method should be overridden to clean-up non- resources like closing a file.  
+
+
+
+-------------------
+
+ Peter works as a Programmer in the ABC Company. He writes the following program:   
+class Test
+{ 
+	public void process() 
+	{ 
+		System.out.print("A,"); 
+	}  
+	public static void main(String[] args) 
+	{   
+		try 
+		{ 
+			new b().process(); 
+		}   
+		catch (Exception e) 
+		{ 
+			System.out.println("Exception"); 
+		} 
+	} 
+} 
+class b extends Test 
+{ 
+	public void process() 
+	{ 
+		System.out.print("B"); 
+	}  
+} 
+    
+What will happen when he tries to compile and execute the preceding program?  
+A.  It will produce the output as:   A	B 
+B.    It will produce the output as:     A
+C.  It will produce the output as:    B (ans)
+D.   It will give compilation error.   
+
+----------------
+
+ Imagine you work as a programmer in the ABC Company. 
+You write the following program:   
+
+class Test
+{ 
+	public void process() 
+	{ 
+		System.out.print("A,"); 
+	}  
+	public static void main(String[] args) 
+	{   
+		try 
+		{ 
+			new b().process(); 
+		}   
+		catch (Exception e) 
+		{ 
+			System.out.println("Exception"); 
+		} 
+	} 
+} 	
+class b extends Test 
+{ 
+	public void process() 
+	{ 
+		super.process(); 
+		System.out.print("B"); 
+	} 
+}
+
+What will happen when you try to compile and execute the preceding program?  
+A.  It will produce the output as:    A, B  (ans)
+B.    It will produce the output as:  A  
+C.  It will produce the output as:    B
+D.    It will give compilation error.  
+
+
+--------------
+
+class Acid 
+{  
+	public void process() 
+	{ 
+		System.out.print("A "); 
+	}  
+	public static void main(String[] args) 
+	{   
+		try 
+		{ 
+			((Acid)new B()).process(); 
+		}   
+		catch (Exception e) 
+		{ 
+			System.out.print("Exception "); 
+		}   
+	}  
+ }  
+class B extends Acid  
+{ 
+	public void process() throws RuntimeException  
+	{ 
+		super.process(); 
+		if (true) throw new RuntimeException();  
+		System.out.print("B"); 
+	} 
+} 
+    
+What will happen when she tries to compile and execute the preceding program?  
+A.  It will produce the output as:    A Exception
+B.    It will produce the output as:     B  
+C.  It will produce the output as:    B Exception
+D.    It will generate a compilation error.   
+
+
+-------------
+
+       
